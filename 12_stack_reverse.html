@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let data = [];
+    let currSize = data.length;
+    function Push(value){
+        data[currSize] = value;
+        currSize+=1;
+    }
+    function Pop(){
+        lastElementRemoved = data[currSize-1]
+        currSize-=1;
+        data.length = currSize;
+        return lastElementRemoved
+    }
+   function reverseStr(item){
+    for(let i =0;i<item.length;i++)
+   {
+    Push(item[i])
+   }
+   for(let i =0;i<item.length;i++)
+   {
+    item[i] = Pop();
+   }
+   }
+    let str = 'Muhammad';
+    str = str.split('')
+    reverseStr(str)
+    // console.log(str)
+    console.log(str.join(''))
+</script>
+</html>

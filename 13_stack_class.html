@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Class</title>
+</head>
+<body>
+    
+</body>
+<script> 
+    class Stack{
+        data = [];
+        currSize;
+        maxSize;
+        constructor(){
+            this.currSize = this.data.length
+            this.maxSize = 5
+        }
+        Push(item){
+            if(this.currSize < this.maxSize)
+            {
+                this.data[this.currSize] = item;
+                this.currSize++;
+            }
+            else{
+                alert('stack is full')
+            }
+        }
+        Pop(){
+            if(this.currSize > 0)
+            {
+                this.currSize--;
+                this.data.length = this.currSize;
+            }
+            else{
+            alert('Stack is empty');
+            }
+        }
+        Display(){
+            console.log(this.data)
+        }
+    }
+    str1 = new Stack();
+    str1.Push(10);
+    str1.Push(10);
+    str1.Push(10);
+    str1.Pop()
+    str1.Pop()
+    str1.Pop()
+    str1.Pop()
+    str1.Display()
+</script>
+</html>
